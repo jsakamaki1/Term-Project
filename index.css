@@ -1,0 +1,122 @@
+body{
+    background-color:white;
+    margin-left: 30px;
+    margin-right: 30px;
+    color:grey;
+}
+
+/* Header */
+header{
+    font-family:impact;
+    text-align:center;
+}
+header a{
+    color:rgb(255, 131, 152);
+    text-decoration:none;
+}
+header a:hover{
+    color:rgb(255, 122, 144)
+}
+
+/* Navigation Bar */
+ul#navbar{
+    text-align:center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:30px;
+    color: pink;
+    background-color: white;
+    overflow: hidden;
+    width: 100%; 
+    list-style-type: none;
+    padding:10px;
+    overflow: hidden;
+}
+.nav{
+    display:inline-block;
+    border: 1px dotted pink;
+    padding: 2px 5px 2px 5px;
+    margin: 2px 10px;
+}
+nav a{
+    text-decoration:none;
+    color:pink;
+}
+
+nav a:hover{
+    color:palevioletred;
+}
+
+td{
+    border: 1px dotted pink;
+    padding: 5px 5px;
+    vertical-align:text-top;
+}
+
+td.sidebar{
+    width:350px;
+}
+
+img#map{
+    padding: 5px 5px;
+}
+
+h1{
+    text-align:center;
+    color:pink;
+}
+h2{
+    text-align: center;
+    color:pink;
+}
+h3 a{
+    text-align:left;
+    color:pink;
+}
+
+h3 a:hover{
+    color:grey;
+    text-align:left;
+    margin:0;
+}
+h4{
+    text-align:left;
+    color:grey;
+    margin:0;
+}
+
+td#one{
+    max-width:400px;
+}
+
+td#middle{
+    padding-left:15px;
+}
+div#right{
+    text-align:center;
+}
+
+input{
+    margin-bottom: 5px;
+}
+
+iframe{
+    margin-top: 15px;
+}
+
+hr.main{
+    width:85%;
+    margin-top:20px;
+    margin-bottom:20px;
+    border:1.5px solid pink;
+}
+table{
+    margin-left:auto;
+    margin-right:auto;
+}
+a{
+    color:grey;
+    text-decoration:none;
+}
+a:hover{
+    color:pink;
+}
