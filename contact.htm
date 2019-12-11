@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Recipes and restaurant reviews">
+    <meta name="keywords"
+        content="HTML,CSS,XML,JavaScript, food, foodie, restaurant, boston, massachusetts, Hawaii, Baboon Colege, project">
+    <meta name="author" content="Jodee Sakamaki">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="site.css" type="text/css">
     <title>Contact Me</title>
+    <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function bnw(imageID) {
+            let i = document.getElementById(imageID);
+            if (imageID == "instagram") {
+                i.src = "media/instagram-bnw.png";
+            }
+            else if (imageID == "linkedin") {
+                i.src = "media/linkedin-bnw.png";
+            }
+            else if (imageID == "email") {
+                i.src = "media/gmail-bnw.png";
+            }
+        }
+
+        function normal(imageID) {
+            let i = document.getElementById(imageID);
+            if (imageID == "instagram") {
+                i.src = "media/instagram.png";
+            }
+            else if (imageID == "linkedin") {
+                i.src = "media/linkedin.png";
+            }
+            else if (imageID == "email") {
+                i.src = "media/gmail.png";
+            }
+            // consule log(w);
+            // console.log("current width", i.width);
+            i.innerHTML.width = w + "px";
+        }
+
+    </script>
 </head>
+
 <body>
-    <header>
-        <h1><a href="https://jodeesakamaki.com">Eat With Jodee</a></h1>
-    </header>
-    
     <nav>
+        <header>
+            <h1><a href="https://jodeesakamaki.com">Eat With Jodee</a></h1>
+        </header>
+
+
         <di>
             <ul id="navbar">
                 <li class="nav"><a href="recipes.htm">Recipes</a></li>
@@ -20,29 +61,39 @@
                 <li class="nav"><a href="index.htm">Home</a></li>
                 <li class="nav"><a href="contact.htm">Contact</a></li>
                 <li class="nav"><a href="sitemap.htm">Site Map</a></li>
-            </ul>  
-        </di>   
+            </ul>
+        </di>
     </nav>
     <h1 id="title">Contact Me</h1>
-         <di>
-            <ul id="socialmedia">
-                <li class="icon"><a href="http://instagram.com/miss_jodee"><img src="media/instagram.png" title="instagram" alt="insta" height="50px"></a></li>
-                <li class="icon"><a href="https://www.linkedin.com/in/jodeesakamaki/"><img src="media/linkedin.png" title="linkedin" alt="linkedin" height="50px"></a></li>
-                <li class="icon"><a href="mailto:jsakamaki1@babson.edu" target="_top"><img src="media/gmail.png" title="email" alt="email" height=50px></a></li>
-            </ul>  
-        </di>      
-        
-        <div id="feedback">
-            <form action="mailto:jsakamaki1@babson.edu">
-                <input class="form" type="text" id="fname" name="firstname" placeholder="First Name">
-                <br>
-                <input class="form" type="text" id="lname" name="lastname" placeholder="Last Name">
-                <br>
-                <textarea class="form" name="feedback" placeholder="Feedback" rows="20" cols="75"></textarea>
-                <br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
+    <di>
+        <ul id="socialmedia">
+            <li class="icon"><a href="http://instagram.com/miss_jodee"><img onmouseover="bnw(this.id)"
+                        onmouseout="normal(this.id)" id="instagram" src="media/instagram.png" title="instagram" alt="insta"
+                        height="50px"></a></li>
+            <li class="icon"><a href="https://www.linkedin.com/in/jodeesakamaki/"><img onmouseover="bnw(this.id)"
+                        onmouseout="normal(this.id)" id="linkedin" src="media/linkedin.png" title="linkedin" alt="linkedin"
+                        height="50px"></a></li>
+            <li class="icon"><a href="mailto:jsakamaki1@babson.edu" target="_top"><img onmouseover="bnw(this.id)"
+                        onmouseout="normal(this.id)" id="email" src="media/gmail.png" title="email" alt="email" height=50px></a>
+            </li>
+        </ul>
+    </di>
+
+    <div id="feedback">
+        <form action="mailto:jsakamaki1@babson.edu">
+            <input class="form" type="text" id="fname" name="firstname" placeholder="First Name">
+            <br>
+            <input class="form" type="text" id="lname" name="lastname" placeholder="Last Name">
+            <br>
+            <input class="form" type="text" id="email" name="email" placeholder="Email Address">
+            <br>
+            <textarea class="form" name="feedback" placeholder="Feedback" rows="20" cols="75"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="reset">
+        </form>
+    </div>
 
 </body>
+
 </html>
