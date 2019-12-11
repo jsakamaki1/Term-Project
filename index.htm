@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="description" content="Recipes and restaurant reviews">
+    <meta name="keywords"
+        content="HTML,CSS,XML,JavaScript, food, foodie, restaurant, boston, massachusetts, Hawaii, Baboon Colege, project">
+    <meta name="author" content="Jodee Sakamaki">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="index.css" type="text/css">
+    <script type="text/javascript">
+        const slides = ["media/fam1.jpg", "media/fam2.jpg", "media/fam3.jpg"];
+        let i = 0;
 
+        function slideShow() {
+            let famPics = document.getElementById("famPics")
+            if (i == slides.length) {
+                i = 0;
+            }
+            famPics.src = slides[i];
+            setTimeout("slideShow()", 1500);
+
+        }    
+    </script>
 </head>
-<body>
-    <header>
-        <h1><a href="https://jodeesakamaki.com">Eat With Jodee</a></h1>
-    </header>
-    
+
+<body onload="slideShow()">
     <nav>
+        <header>
+            <h1><a href="https://jodeesakamaki.com">Eat With Jodee</a></h1>
+        </header>
+
+
         <di>
             <ul id="navbar">
                 <li class="nav"><a href="recipes.htm">Recipes</a></li>
@@ -21,35 +43,56 @@
                 <li class="nav"><a href="index.htm">Home</a></li>
                 <li class="nav"><a href="contact.htm">Contact</a></li>
                 <li class="nav"><a href="sitemap.htm">Site Map</a></li>
-            </ul>   
-        </di>   
+            </ul>
+        </di>
     </nav>
     <table>
         <tr>
             <td class="sidebar">
                 <h2>About Me:</h2>
                 <br>
-                My name is Jodee! I'm from Honolulu, Hawaii, and I attend Babson College in Wellesley, Massachusetts. I am currently a Senior and I'm concentrating in Business Analytics and Information Technology Management. 
+                My name is Jodee! I'm from Honolulu, Hawaii, and I attend Babson College in Wellesley, Massachusetts. I
+                am currently a Senior and I'm concentrating in Business Analytics and Information Technology Management.
                 <br>
                 <map name="home">
-                    <area shape="rect" coords="100,225, 175, 250" href="https://www.gohawaii.com/" alt="Hawaii" title="Hawaii" target="_blank"/>
+                    <area shape="rect" coords="100,225, 175, 250" href="https://www.gohawaii.com/" alt="Hawaii"
+                        title="Hawaii" target="_blank" />
 
-                    <area shape="rect" coords="280,50, 300, 100" href="https://www.mass.gov/" alt="Massachusetts" title="Massachusetts" target="_blank"/>
+                    <area shape="rect" coords="280,50, 300, 100" href="https://www.mass.gov/" alt="Massachusetts"
+                        title="Massachusetts" target="_blank" />
                 </map>
-                <img src="media/mrprintables-printable-map-of-usa-blank.jpg" title="US map" alt="map" height="250px" id="map" usemap="#home">
+                <img src="media/mrprintables-printable-map-of-usa-blank.jpg" title="US map" alt="map" height="250px"
+                    id="map" usemap="#home">
                 <br>
-                I am extremely passionate about eating and anything food related. I'm obsessed with trying new recipes and restaurants, so I decided to share my restaurant and cooking adventures!
+                I am extremely passionate about eating and anything food related. I'm obsessed with trying new recipes
+                and restaurants, so I decided to share my restaurant and cooking adventures!
                 <br>
                 If you're interested in my food journey please stay tuned!
-            </td>
-            <td id="middle">
+                <p><img id="famPic" src="media/fam1.jpg" title="family" alt="fam pic" height="400px"></p>
+                </td>
+
+                <td id="middle">
                 <h1>Recent Posts</h1>
+                <hr class="main">
+                <div>
+                    <h3><a href="sweetbasil.htm">Sweet Basil - Needham, MA</a></h3>
+                    <h4>December 3, 2019</h4>
+                    <a href="sweetbasil.htm">Click here to read...</a><br>
+                    <video controls height="400" muted loop>
+                        <source src="media/sweetbasil.MOV" type="video/mp4">
+                    </video>
+                </div>
+                <hr class="main">
+                <div>
+                    <h3><a href="spaghetti.htm">Italian Sausage Spaghetti - Recipe</a></h3>
+                    <h4>October 10, 2019</h4><a href="spaghetti.htm">Click here to read...</a><br>
+                </div>
                 <hr class="main">
                 <div>
                     <h3><a href="olivenivy.htm">Olive & Ivy - Scottsdale, AZ</a></h3>
                     <h4>October 11, 2019</h4>
                     <a href="olivenivy.htm">Click here to read...</a><br>
-                    <img src="media/olivenivy.JPG" title="olivenivy" alt="olivenivy" height="400px">                   
+                    <img src="media/olivenivy.JPG" title="olivenivy" alt="olivenivy" height="400px">
                 </div>
                 <hr class="main">
                 <div>
@@ -58,29 +101,31 @@
                     <video controls height="400" muted loop>
                         <source src="media/musubi.mov" type="video/mp4">
                     </video>
-                    
+
                 </div>
                 <hr class="main">
-                
+
             </td>
             <td class="sidebar">
                 <h2>Wanna keep in touch?</h2>
                 <div id="right">
-                <form action="mailto:jsakamaki1@babson.edu" method="post" enctype="text/plain">
-                    Subscribe to get notified when new blogs are posted!
-                    <br>
-                    <input type="text" placeholder="Name" name="name" required>
-                    <br>
-                    <input type="text" placeholder="Email address" name="mail" required>
-                    <br>
-                    <input type="submit" value="Subscribe">
-                    <br>
-                    <iframe width="325" height="325" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/318128236&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                </form>
+                    <form action="mailto:jsakamaki1@babson.edu" method="post" enctype="text/plain">
+                        Subscribe to get notified when new blogs are posted!
+                        <br>
+                        <input type="text" placeholder="Name" name="name" required>
+                        <br>
+                        <input type="text" placeholder="Email address" name="mail" required>
+                        <br>
+                        <input type="submit" value="Subscribe">
+                        <br>
+                        <iframe width="325" height="325" scrolling="no" frameborder="no" allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/318128236&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    </form>
                 </div>
             </td>
         </tr>
     </table>
-    
+
 </body>
+
 </html>
