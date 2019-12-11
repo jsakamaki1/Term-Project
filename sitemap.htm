@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Recipes and restaurant reviews">
+    <meta name="keywords"
+        content="HTML,CSS,XML,JavaScript, food, foodie, restaurant, boston, massachusetts, Hawaii, Baboon Colege, project">
+    <meta name="author" content="Jodee Sakamaki">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="site.css" type="text/css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #draggable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+        }
+        #red{
+            border: 1px solid red;
+        }
+        #green{
+            border: 1px solid green;
+        }
+        #blue{
+            border: 1px solid blue;
+        }
+        #pink{
+            border:1px solid pink;
+        }
+    </style>
     <title>Site Map</title>
-    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        function color(pID) {
+            let t = document.getElementById("title")
+            if (pID == "red") {
+                t.style.color = "red";
+            }
+            else if (pID == "green") {
+                t.style.color = "green";
+            }
+            else if (pID == "blue") {
+                t.style.color = "blue";
+            }
+            else if (pID == "pink") {
+                t.style.color = "pink";
+            }
+        }
+        $(function () {
+            $(".draggable").draggable();
+        });
+    </script>
 </head>
+
 <body>
-    <header>
-        <h1><a href="https://jodeesakamaki.com">Eat With Jodee</a></h1>
-    </header>
-    
     <nav>
+        <header>
+            <h1 id="title"><a href="https://jodeesakamaki.com">Eat With Jodee</a></h1>
+        </header>
+
+
         <di>
             <ul id="navbar">
                 <li class="nav"><a href="recipes.htm">Recipes</a></li>
@@ -21,17 +70,28 @@
                 <li class="nav"><a href="index.htm">Home</a></li>
                 <li class="nav"><a href="contact.htm">Contact</a></li>
                 <li class="nav"><a href="sitemap.htm">Site Map</a></li>
-            </ul>  
-        </di>   
+            </ul>
+        </di>
     </nav>
     <h1 id="title">Eat with Jodee - Site Map</h1>
     <div id="content">
         <p>
-            <a href="index.htm">Home Page</a><br>
-            <a href="recipes.htm">Recipes</a><br>
-            <a href="restaurants.htm">Restaurants</a><br>
-            <a href="contact.htm">Contact Me</a><br>
+            <a class="draggable" href="index.htm">Home Page</a><br>
+            <a class="draggable" href="recipes.htm">Recipes</a><br>
+            <a class="draggable" href="restaurants.htm">Restaurants</a><br>
+            <a class="draggable" href="contact.htm">Contact Me</a><br>
         </p>
+        <p id="red" onclick="color(this.id)">Change title color to red</p>
+        <p id="green" onclick="color(this.id)">Change title color to green</p>
+        <p id="blue" onclick="color(this.id)">Change title color to blue</p>
+        <p id="pink" onclick="color(this.id)">Change title color to pink</p>
+        <p>
+            I, Jodee Sakamaki, pledge my honor that I have neither received nor provided unauthorized assistance during
+            the completion of this work. I have read the term project instructions and observed all the restrictions and
+            limitations specified therein.
+        </p>
+        <p>All intellectual property at this website is in the public domain or is the property of the site-owner</p>
     </div>
 </body>
+
 </html>
