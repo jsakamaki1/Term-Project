@@ -49,21 +49,6 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript">
-        function color(divID) {
-            let t = document.getElementById("title");
-            if (divID == "red") {
-                t.style.color = "red";
-            }
-            else if (divID == "green") {
-                t.style.color = "green";
-            }
-            else if (divID == "blue") {
-                t.style.color = "blue";
-            }
-            else if (divID == "pink") {
-                t.style.color = "pink";
-            }
-        }
         $(function () {
             $(".draggable").draggable();
         });
@@ -95,10 +80,6 @@
             <a class="draggable" href="restaurants.htm">Restaurants</a><br>
             <a class="draggable" href="contact.htm">Contact Me</a><br>
         </p>
-        <div id="red" onclick="color(this.id)"><p>Change title color to red</p></div>
-        <div id="green" onclick="color(this.id)"><p>Change title color to green</p></div>
-        <div id="blue" onclick="color(this.id)"><p>Change title color to blue</p></div>
-        <div id="pink" onclick="color(this.id)"><p>Change title color to pink</p></div>
         <p>
             I, Jodee Sakamaki, pledge my honor that I have neither received nor provided unauthorized assistance during
             the completion of this work. I have read the term project instructions and observed all the restrictions and
