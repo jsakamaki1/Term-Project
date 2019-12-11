@@ -41,16 +41,16 @@
     </style>
     <script type="text/javascript">
         const slides = ["media/fam1.jpg", "media/fam2.jpg", "media/fam3.jpg", "media/fam4.jpg"];
-        let i = 0;
+        let f = 0;
 
         function slideShow() {
             let famPic = document.getElementById("famPic")
-            if (i == slides.length) {
-                i = 0;
+            if (f == slides.length) {
+                f = 0;
             }
-            i = i + 1;
+            f = f + 1;
 
-            famPic.src = slides[i];
+            famPic.src = slides[f];
             setTimeout("slideShow()", 1000);
         }
         let p = 320;
