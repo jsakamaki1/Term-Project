@@ -18,35 +18,49 @@
             height: 150px;
             padding: 0.5em;
         }
-        #red{
+
+        #red {
             border: 1px solid red;
         }
-        #green{
+
+        #green {
             border: 1px solid green;
         }
-        #blue{
+
+        #blue {
             border: 1px solid blue;
         }
-        #pink{
-            border:1px solid pink;
+
+        #pink {
+            border: 1px solid pink;
         }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154422293-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154422293-1');
+    </script>
+
     <title>Site Map</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript">
-        function color(pID) {
-            let t = document.getElementById("title")
-            if (pID == "red") {
+        function color(divID) {
+            let t = document.getElementById("title");
+            if (divID == "red") {
                 t.style.color = "red";
             }
-            else if (pID == "green") {
+            else if (divID == "green") {
                 t.style.color = "green";
             }
-            else if (pID == "blue") {
+            else if (divID == "blue") {
                 t.style.color = "blue";
             }
-            else if (pID == "pink") {
+            else if (divID == "pink") {
                 t.style.color = "pink";
             }
         }
@@ -81,10 +95,10 @@
             <a class="draggable" href="restaurants.htm">Restaurants</a><br>
             <a class="draggable" href="contact.htm">Contact Me</a><br>
         </p>
-        <p id="red" onclick="color(this.id)">Change title color to red</p>
-        <p id="green" onclick="color(this.id)">Change title color to green</p>
-        <p id="blue" onclick="color(this.id)">Change title color to blue</p>
-        <p id="pink" onclick="color(this.id)">Change title color to pink</p>
+        <div id="red" onclick="color(this.id)"><p>Change title color to red</p></div>
+        <div id="green" onclick="color(this.id)"><p>Change title color to green</p></div>
+        <div id="blue" onclick="color(this.id)"><p>Change title color to blue</p></div>
+        <div id="pink" onclick="color(this.id)"><p>Change title color to pink</p></div>
         <p>
             I, Jodee Sakamaki, pledge my honor that I have neither received nor provided unauthorized assistance during
             the completion of this work. I have read the term project instructions and observed all the restrictions and
