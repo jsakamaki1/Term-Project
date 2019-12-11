@@ -23,6 +23,22 @@
 
     <title>Home Page</title>
     <link rel="stylesheet" href="index.css" type="text/css">
+    <style>
+        h2#hello {
+            position: absolute;
+            color: white;
+            font-family: Arial;
+            width: auto;
+        }
+
+        div#msg {
+            border: 1px solid pink;
+            height: 50px;
+            margin-left: 300px;
+            margin-right: 300px;
+            background-color: pink;
+        }
+    </style>
     <script type="text/javascript">
         const slides = ["media/fam1.jpg", "media/fam2.jpg", "media/fam3.jpg", "media/fam4.jpg"];
         let i = 0;
@@ -36,11 +52,29 @@
 
             famPic.src = slides[i];
             setTimeout("slideShow()", 1000);
-        }    
+        }
+        let p = 320;
+        let n = 0;
+        const msgList = ["ALOHA!", "welcome to my site!", "Recipes & Restaurant reviews are all available here"];
+        function doScroll() {
+            let x = document.getElementById("hello");
+            x.innerHTML = msgList[n];
+            x.style.left = p + "px";
+            if (p > 700) {
+                p = 320;
+                n++;
+                if (n == msgList.length) {
+                    n = 0;
+                }
+            } else {
+                p = p + 1;
+            }
+            setTimeout("doScroll()")
+        }
     </script>
 </head>
 
-<body onload="slideShow()">
+<body onload="slideShow(); doScroll()">
     <nav>
         <header>
             <h1><a href="https://jodeesakamaki.com">Eat With Jodee</a></h1>
@@ -57,8 +91,10 @@
             </ul>
         </di>
     </nav>
+    <div id="msg"><h2 id="hello">ALOHA!</h2></div>
+
     <table>
-        <tr>
+      >  <tr>
             <td class="sidebar">
                 <h2>About Me:</h2>
                 <br>
@@ -132,7 +168,7 @@
                     <iframe width="325" height="325" scrolling="no" frameborder="no" allow="autoplay"
                         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/318128236&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                 </div>
-                
+
             </td>
         </tr>
     </table>
