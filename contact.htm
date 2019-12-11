@@ -69,9 +69,13 @@
                 alert("Please add feedback")
             }
             else {
-                result.innerHTML = "Thank you for completing!"
+                result.innerHTML = "Thank you for completing!";
+                title.style.color = "green";
             }
             return false;
+        }
+        function back(){
+            title.style.color ="pink";
         }
     </script>
 </head>
@@ -93,7 +97,7 @@
             </ul>
         </di>
     </nav>
-    <h1 id="title">Contact Me</h1>
+    <h1 id="title" onclick="back()">Contact Me</h1>
     <di>
         <ul id="socialmedia">
             <li class="icon"><a href="http://instagram.com/miss_jodee"><img onmouseover="bnw(this.id)"
