@@ -11,20 +11,31 @@
         content="HTML,CSS,XML,JavaScript, food, foodie, restaurant, boston, massachusetts, Hawaii, Baboon Colege, project">
     <meta name="author" content="Jodee Sakamaki">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154422293-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154422293-1');
+    </script>
+
     <title>Home Page</title>
     <link rel="stylesheet" href="index.css" type="text/css">
     <script type="text/javascript">
-        const slides = ["media/fam1.jpg", "media/fam2.jpg", "media/fam3.jpg"];
+        const slides = ["media/fam1.jpg", "media/fam2.jpg", "media/fam3.jpg", "media/fam4.jpg"];
         let i = 0;
 
         function slideShow() {
-            let famPics = document.getElementById("famPics")
+            let famPic = document.getElementById("famPic")
             if (i == slides.length) {
                 i = 0;
             }
-            famPics.src = slides[i];
-            setTimeout("slideShow()", 1500);
+            i = i + 1;
 
+            famPic.src = slides[i];
+            setTimeout("slideShow()", 1000);
         }    
     </script>
 </head>
@@ -68,10 +79,10 @@
                 and restaurants, so I decided to share my restaurant and cooking adventures!
                 <br>
                 If you're interested in my food journey please stay tuned!
-                <p><img id="famPic" src="media/fam1.jpg" title="family" alt="fam pic" height="400px"></p>
-                </td>
+                <p><img id="famPic" src="media/fam1.jpg" title="family" alt="fam pic" height="250px"></p>
+            </td>
 
-                <td id="middle">
+            <td id="middle">
                 <h1>Recent Posts</h1>
                 <hr class="main">
                 <div>
@@ -117,11 +128,11 @@
                         <input type="text" placeholder="Email address" name="mail" required>
                         <br>
                         <input type="submit" value="Subscribe">
-                        <br>
-                        <iframe width="325" height="325" scrolling="no" frameborder="no" allow="autoplay"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/318128236&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                     </form>
+                    <iframe width="325" height="325" scrolling="no" frameborder="no" allow="autoplay"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/318128236&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                 </div>
+                
             </td>
         </tr>
     </table>
